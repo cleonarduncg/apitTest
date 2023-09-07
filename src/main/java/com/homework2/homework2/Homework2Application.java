@@ -25,9 +25,9 @@ public class Homework2Application {
             String jSonPrice = restTemplate.getForObject(url, String.class);
             JsonNode root = mapper.readTree(jSonPrice);
 
-            //gets coin name
+            //gets city name
             String cityName = root.findValue("name").asText();
-            //gets coin value in USD
+            //gets temperature in imperial
             double temperature = root.findValue("temperature").asDouble();
             //print vals
             System.out.println("City: " + cityName);
